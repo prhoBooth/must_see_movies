@@ -5,6 +5,8 @@ class Actor < ApplicationRecord
 
   # Validations
 
+  validates :name, :uniqueness => { :scope => [:bio] }
+
   validates :name, :presence => true
 
 end
